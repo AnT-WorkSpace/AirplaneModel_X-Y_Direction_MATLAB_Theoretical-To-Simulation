@@ -30,7 +30,7 @@ $$\ddot{x} = \frac{1}{m} \Big\{ F_{Prop} - \frac{1}{2}\rho_A \cdot c_{d,x} \cdot
 ### 2. Vertical Direction ($y$-Axis) Force Equilibrium
 $$\sum F_y = 0 \Rightarrow F_N + F_L - F_G - F_{in,y} - F_{AR,y} = 0$$
 
-$$\ddot{y} = \frac{1}{m} \Big\{ \max \left[ \left( m \cdot g - \frac{1}{2}\rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 \right), 0 \right] + \frac{1}{2}\rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 - \ mg - \frac{1}{2}\rho_A \cdot c_{d,y} \cdot A_y \cdot \dot{y}^2 \cdot \text{sign}(\dot{y}) \Big\} - g$$
+$$\ddot{y} = \frac{1}{m} \Big\{ \max \left[ \left( m \cdot g - \frac{1}{2}\rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 \right), 0 \right] + \frac{1}{2}\rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 - m \cdot g - \frac{1}{2}\rho_A \cdot c_{d,y} \cdot A_y \cdot \dot{y}^2 \cdot \text{sign}(\dot{y}) \Big\} - g$$
 
 ---
 
@@ -45,7 +45,7 @@ $$\ddot{x} = \frac{1}{m} \cdot \left\{ F_{Prop} - \frac{1}{2} \cdot \rho_A \cdot
 ## Model Preview 
 
 ![Aircraft Model & System Diagram](doc/images/.jpeg)
->*Note: I will put Model Preview
+>*Note: I will put Model Preview here
 
 
 ---
@@ -57,7 +57,18 @@ $$\ddot{x} = \frac{1}{m} \cdot \left\{ F_{Prop} - \frac{1}{2} \cdot \rho_A \cdot
 
 The parameters defined in `src/aircraft_parameter.m` are:
 
->*Note: I will make a table here with aircraft_parameters
+| Parameter | Symbol | Description | Value | Unit |
+| :--- | :---: | :--- | :---: | :---: |
+| **Engine Thrust** | $F_{\text{prop}}$ | Propulsive engine thrust | $30000$ | $\text{N}$ |
+| **Aircraft Mass** | $m$ | Total aircraft mass | $5000$ | $\text{kg}$ |
+| **Gravity** | $g$ | Gravitational acceleration | $9.81$ | $\text{m/s}^2$ |
+| **Lift Coefficient** | $c_L$ | Aerodynamic lift coefficient | $0.8$ | $-$ |
+| **Air Density** | $\rho_A$ | Ambient air density | $1.2$ | $\text{kg/m}^3$ |
+| **X-Drag Coefficient** | $c_{dx}$ | Drag coefficient in x-direction | $0.3$ | $-$ |
+| **Rolling Friction** | $\mu$ | Rolling resistance friction coefficient | $0.01$ | $-$ |
+| **Area_X** | $A_x$ | cross-sectional area in x-direction | $10$ | $\text{m}^2$ |
+| **Y-Drag Coefficient** | $c_{dy}$ | Drag coefficient in y-direction | $0.5$ | $-$ |
+| **Area_Y** | $A_y$ | cross-sectional area in y-direction | $30$ | $\text{m}^2$ |
 
 ---
 
@@ -74,5 +85,5 @@ AirplanModel_X-Y_Direction/
 │   └── Validation_airplane_x.mat   # Validation flight dataset for model verification
 └── doc/
     ├── handwritten_equations.pdf   # Step-by-step hand-derived differential equations
-    └── images/                     # System diagrams and simulation preview graphics
+    └── images/                     # Aircraft take-off diagrams and simulation preview graphics
         └── model_preview.png       # Image preview displayed in README
