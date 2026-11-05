@@ -37,6 +37,7 @@ $$\ddot{y} = \frac{1}{m} \left\{ \max\left[ \left( m \cdot g - \frac{1}{2} \rho_
 ## Model Preview 
 
 ![Aircraft Model & System Diagram](doc/images/.jpeg)
+>*Note: I will put Model Preview
 
 
 ---
