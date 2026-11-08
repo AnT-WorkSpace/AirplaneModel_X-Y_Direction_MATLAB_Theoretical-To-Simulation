@@ -25,12 +25,12 @@ The model explicitly accounts for aerodynamic drag, velocity-dependent lift gene
 ### 1. Horizontal Direction ($x$-Axis) Force Equilibrium
 $$\sum F_x = 0 \Rightarrow F_{Prop} - F_{in,x} - F_{AR,x} - F_F = 0$$
 
-$$\ddot{x} = \frac{1}{m} \Big\{ F_{Prop} - \frac{1}{2}\rho_A \cdot c_{d,x} \cdot A_x \cdot \dot{x}^2 \cdot \text{sign}(\dot{x}) - \mu \cdot F_N \cdot \text{sign}(\dot{x}) \Big\}$$
+$$\ddot{x} = \frac{1}{m} \left\{ F_{Prop} - \frac{1}{2} \rho_A \cdot c_{d,x} \cdot A_x \cdot \dot{x}^2 \cdot \text{sign}(\dot{x}) - \mu \cdot F_N \cdot \text{sign}(\dot{x}) \right\}$$
 
 ### 2. Vertical Direction ($y$-Axis) Force Equilibrium
 $$\sum F_y = 0 \Rightarrow F_N + F_L - F_G - F_{in,y} - F_{AR,y} = 0$$
 
-$$\ddot{y} = \frac{1}{m} \Big\{ \max \left[ \left( m \cdot g - \frac{1}{2}\rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 \right), 0 \right] + \frac{1}{2}\rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 - m \cdot g - \frac{1}{2}\rho_A \cdot c_{d,y} \cdot A_y \cdot \dot{y}^2 \cdot \text{sign}(\dot{y}) \Big\} - g$$
+$$\ddot{y} = \frac{1}{m} \left\{ \max \left[ \left( m \cdot g - \frac{1}{2} \rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 \right), 0 \right] + \frac{1}{2} \rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 - m \cdot g - \frac{1}{2} \rho_A \cdot c_{d,y} \cdot A_y \cdot \dot{y}^2 \cdot \text{sign}(\dot{y}) \right\} - g$$
 
 ---
 
@@ -38,14 +38,13 @@ $$\ddot{y} = \frac{1}{m} \Big\{ \max \left[ \left( m \cdot g - \frac{1}{2}\rho_A
 
 ### From equation in x-axis and normal force from the equation in y-axis
 
-$$\ddot{x} = \frac{1}{m} \cdot \left\{ F_{Prop} - \frac{1}{2} \cdot \rho_A \cdot c_{d,x} \cdot A_x \cdot \dot{x}^2 \cdot \text{sign}(\dot{x}) - \mu \cdot \max \left[ \left( m \cdot g - \frac{1}{2} \cdot \rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 \right) , 0 \right] \cdot \text{sign}(\dot{x}) \right\}$$
+$$\ddot{x} = \frac{1}{m} \cdot \left\{ F_{Prop} - \frac{1}{2} \cdot \rho_A \cdot c_{d,x} \cdot A_x \cdot \dot{x}^2 \cdot \text{sign}(\dot{x}) - \mu \cdot \max \left[ \left( m \cdot g - \frac{1}{2} \cdot \rho_A \cdot c_L \cdot A_x \cdot \dot{x}^2 \right), 0 \right] \cdot \text{sign}(\dot{x}) \right\}$$
 
 ---
 
 ## Model Preview 
 
-![Aircraft Model & System Diagram](doc/images/.jpeg)
->*Note: I will put Model Preview here
+![Aircraft Model & System Diagram](doc/images/Takeoff-Airplane-SimulinkModel.jpeg)
 
 
 ---
@@ -86,4 +85,3 @@ AirplanModel_X-Y_Direction/
 └── doc/
     ├── handwritten_equations.pdf   # Step-by-step hand-derived differential equations
     └── images/                     # Aircraft take-off diagrams and simulation preview graphics
-        └── model_preview.png       # Image preview displayed in README
